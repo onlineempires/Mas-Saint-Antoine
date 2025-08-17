@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://massaintantoine.com/sitemap.xml
+
+# Disallow common non-essential directories
+Disallow: /js/
+Disallow: /css/
+Disallow: *.js$
+Disallow: *.css$
+
+# Allow Google to crawl CSS and JS for better rendering
+User-agent: Googlebot
+Allow: /js/
+Allow: /css/
+Allow: *.js$
+Allow: *.css$
+
+# Crawl delay (optional, adjust as needed)
+Crawl-delay: 1

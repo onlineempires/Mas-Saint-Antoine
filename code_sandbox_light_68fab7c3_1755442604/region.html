@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Provence - Mas Saint Antoine | Regional Attractions & Experiences</title>
+    <meta name="description" content="Explore the magic of Provence from Mas Saint Antoine. Discover Avignon, lavender fields, vineyards, hilltop villages, and authentic Provençal experiences.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-inter text-gray-800 bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-sm"></i>
+                    </div>
+                    <a href="index.html" class="text-xl font-playfair font-semibold text-gray-800">Mas Saint Antoine</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+                    <a href="gites.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Gîtes</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</a>
+                    <a href="region.html" class="text-blue-600 font-semibold">Region</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</a>
+                    
+                    <!-- Language Toggle -->
+                    <div class="flex items-center space-x-2 text-sm">
+                        <button class="text-blue-600 font-medium" onclick="setLanguage('en')">EN</button>
+                        <span class="text-gray-400">|</span>
+                        <button class="text-gray-500 hover:text-blue-600" onclick="setLanguage('fr')">FR</button>
+                    </div>
+                    
+                    <a href="booking.html" class="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 hover:shadow-lg transition-all duration-300">
+                        Book Now
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700 hover:text-blue-600" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-blue-50 via-cyan-50 to-indigo-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="font-playfair text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                Discover <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Provence</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                From our perfectly positioned base near Avignon, explore the treasures of Provence: 
+                medieval villages, lavender fields, world-class vineyards, and timeless landscapes that have 
+                inspired artists for centuries.
+            </p>
+        </div>
+    </section>
+
+    <!-- Location Advantages -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-4xl font-bold text-gray-800 mb-6">
+                        Perfectly Positioned in Provence
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Mas Saint Antoine's strategic location puts you at the heart of Provence's most celebrated attractions, 
+                        with easy access to culture, nature, and authentic Provençal experiences.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <h3 class="font-playfair text-3xl font-semibold text-gray-800 mb-6">
+                            Gateway to Provence's Wonders
+                        </h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Our location near Avignon provides the perfect balance of tranquil countryside retreat 
+                            and convenient access to Provence's most iconic destinations. Whether you're seeking 
+                            cultural enrichment, natural beauty, or culinary adventures, everything is within reach.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg">
+                                <i class="fas fa-clock text-blue-600 text-2xl mb-2"></i>
+                                <div class="font-semibold text-gray-800">15 minutes</div>
+                                <div class="text-sm text-gray-600">to Avignon center</div>
+                            </div>
+                            <div class="text-center p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg">
+                                <i class="fas fa-mountain text-purple-600 text-2xl mb-2"></i>
+                                <div class="font-semibold text-gray-800">30 minutes</div>
+                                <div class="text-sm text-gray-600">to Luberon villages</div>
+                            </div>
+                            <div class="text-center p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg">
+                                <i class="fas fa-wine-glass text-green-600 text-2xl mb-2"></i>
+                                <div class="font-semibold text-gray-800">20 minutes</div>
+                                <div class="text-sm text-gray-600">to Châteauneuf vineyards</div>
+                            </div>
+                            <div class="text-center p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg">
+                                <i class="fas fa-seedling text-blue-600 text-2xl mb-2"></i>
+                                <div class="font-semibold text-gray-800">45 minutes</div>
+                                <div class="text-sm text-gray-600">to lavender fields</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl h-96 flex items-center justify-center">
+                        <div class="text-center text-gray-600">
+                            <i class="fas fa-map-marked-alt text-6xl mb-4 opacity-50"></i>
+                            <p class="text-lg font-semibold">Regional Map</p>
+                            <p class="text-sm">Provence attractions & distances</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Must-Visit Attractions -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-4xl font-bold text-gray-800 mb-6">
+                        Must-Visit Attractions
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        From UNESCO World Heritage sites to hidden gems known only to locals, 
+                        discover the treasures that make Provence unforgettable.
+                    </p>
+                </div>
+
+                <div class="space-y-16">
+                    <!-- Avignon -->
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="flex items-center mb-4">
+                                <h3 class="font-playfair text-2xl font-bold text-gray-800">Avignon - City of Popes</h3>
+                                <span class="ml-4 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">UNESCO Site</span>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Explore the magnificent Palais des Papes, one of the largest Gothic palaces in the world. 
+                                Stroll through medieval streets, cross the famous Pont d'Avignon, and immerse yourself 
+                                in a city that was once the center of Christian Europe.
+                            </p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-crown text-blue-600"></i>
+                                    <span class="text-gray-700">Palais des Papes (Palace of the Popes)</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-bridge text-blue-600"></i>
+                                    <span class="text-gray-700">Pont Saint-Bénézet (Pont d'Avignon)</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-theater-masks text-blue-600"></i>
+                                    <span class="text-gray-700">Avignon Theatre Festival (July)</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-shopping-bag text-blue-600"></i>
+                                    <span class="text-gray-700">Les Halles covered market</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl h-80 flex items-center justify-center">
+                            <div class="text-center text-gray-600">
+                                <i class="fas fa-crown text-6xl mb-4 opacity-50"></i>
+                                <p class="text-lg font-semibold">Avignon</p>
+                                <p class="text-sm">Palais des Papes & historic center</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Luberon Villages -->
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl h-80 flex items-center justify-center">
+                                <div class="text-center text-gray-600">
+                                    <i class="fas fa-mountain text-6xl mb-4 opacity-50"></i>
+                                    <p class="text-lg font-semibold">Luberon Villages</p>
+                                    <p class="text-sm">Hilltop medieval villages</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <div class="flex items-center mb-4">
+                                <h3 class="font-playfair text-2xl font-bold text-gray-800">Luberon Villages</h3>
+                                <span class="ml-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Plus Beaux Villages</span>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Discover picture-perfect hilltop villages that seem frozen in time. Gordes, Roussillon, 
+                                Ménerbes, and others offer stunning views, artisan shops, and the authentic charm that 
+                                has captivated visitors for generations.
+                            </p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-mountain text-blue-600"></i>
+                                    <span class="text-gray-700">Gordes - "Most beautiful village"</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-palette text-blue-600"></i>
+                                    <span class="text-gray-700">Roussillon - Ochre cliffs & colors</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-wine-glass text-blue-600"></i>
+                                    <span class="text-gray-700">Ménerbes - Wine village charm</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-camera text-blue-600"></i>
+                                    <span class="text-gray-700">Lacoste - Panoramic viewpoints</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wine Country -->
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="flex items-center mb-4">
+                                <h3 class="font-playfair text-2xl font-bold text-gray-800">Châteauneuf-du-Pape</h3>
+                                <span class="ml-4 bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">World Famous</span>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Visit the birthplace of France's most prestigious wine appellation. Tour historic châteaux, 
+                                taste exceptional wines, and learn about centuries-old winemaking traditions in the heart 
+                                of the Rhône Valley.
+                            </p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-wine-bottle text-blue-600"></i>
+                                    <span class="text-gray-700">Wine tastings & cellar tours</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-castle text-blue-600"></i>
+                                    <span class="text-gray-700">Château ruins & papal history</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-grape-alt text-blue-600"></i>
+                                    <span class="text-gray-700">Vineyard walks & bike tours</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-utensils text-blue-600"></i>
+                                    <span class="text-gray-700">Gourmet restaurants</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-red-100 to-purple-100 rounded-2xl h-80 flex items-center justify-center">
+                            <div class="text-center text-gray-600">
+                                <i class="fas fa-wine-glass text-6xl mb-4 opacity-50"></i>
+                                <p class="text-lg font-semibold">Wine Country</p>
+                                <p class="text-sm">Châteauneuf-du-Pape vineyards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Experiences -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-4xl font-bold text-gray-800 mb-6">
+                        Provence Through the Seasons
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Each season brings its own magic to Provence, from spring wildflowers to autumn harvests. 
+                        Discover the perfect time for your interests.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Spring -->
+                    <div class="text-center group">
+                        <div class="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl h-48 flex items-center justify-center mb-6 group-hover:shadow-lg transition-all duration-300">
+                            <div class="text-center text-gray-600">
+                                <i class="fas fa-seedling text-6xl mb-4 text-green-500"></i>
+                                <p class="text-lg font-semibold">Spring</p>
+                                <p class="text-sm">March - May</p>
+                            </div>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-3">Awakening Nature</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Wildflower blooms</li>
+                            <li>• Perfect cycling weather</li>
+                            <li>• Cherry blossoms</li>
+                            <li>• Easter markets</li>
+                            <li>• Mild temperatures</li>
+                        </ul>
+                    </div>
+
+                    <!-- Summer -->
+                    <div class="text-center group">
+                        <div class="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl h-48 flex items-center justify-center mb-6 group-hover:shadow-lg transition-all duration-300">
+                            <div class="text-center text-gray-600">
+                                <i class="fas fa-sun text-6xl mb-4 text-blue-500"></i>
+                                <p class="text-lg font-semibold">Summer</p>
+                                <p class="text-sm">June - August</p>
+                            </div>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-3">Lavender & Festivals</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Lavender fields in bloom</li>
+                            <li>• Avignon Theatre Festival</li>
+                            <li>• Perfect pool weather</li>
+                            <li>• Long sunny days</li>
+                            <li>• Village festivals</li>
+                        </ul>
+                    </div>
+
+                    <!-- Autumn -->
+                    <div class="text-center group">
+                        <div class="bg-gradient-to-br from-cyan-100 to-indigo-100 rounded-2xl h-48 flex items-center justify-center mb-6 group-hover:shadow-lg transition-all duration-300">
+                            <div class="text-center text-gray-600">
+                                <i class="fas fa-leaf text-6xl mb-4 text-cyan-500"></i>
+                                <p class="text-lg font-semibold">Autumn</p>
+                                <p class="text-sm">September - November</p>
+                            </div>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-3">Harvest Season</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Wine harvest season</li>
+                            <li>• Truffle hunting</li>
+                            <li>• Comfortable temperatures</li>
+                            <li>• Food festivals</li>
+                            <li>• Golden landscapes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Winter -->
+                    <div class="text-center group">
+                        <div class="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl h-48 flex items-center justify-center mb-6 group-hover:shadow-lg transition-all duration-300">
+                            <div class="text-center text-gray-600">
+                                <i class="fas fa-snowflake text-6xl mb-4 text-blue-500"></i>
+                                <p class="text-lg font-semibold">Winter</p>
+                                <p class="text-sm">December - February</p>
+                            </div>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-3">Peaceful Retreat</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Christmas markets</li>
+                            <li>• Cozy fireplaces</li>
+                            <li>• Truffle season peak</li>
+                            <li>• Fewer crowds</li>
+                            <li>• Special rates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities & Experiences -->
+    <section class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-4xl font-bold text-gray-800 mb-6">
+                        Authentic Experiences
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Go beyond sightseeing with immersive experiences that connect you with 
+                        Provence's culture, cuisine, and artisan traditions.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cooking Classes -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-utensils text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-4 text-center">Cooking Classes</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            Learn to prepare authentic Provençal dishes with local chefs. From bouillabaisse to ratatouille, 
+                            master the secrets of Mediterranean cuisine.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Market tours & ingredient selection</li>
+                            <li>• Traditional recipe techniques</li>
+                            <li>• Wine pairing sessions</li>
+                            <li>• Take recipes home</li>
+                        </ul>
+                    </div>
+
+                    <!-- Wine Tours -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-wine-glass text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-4 text-center">Wine Tours</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            Discover world-renowned vineyards and meet passionate winemakers. From Châteauneuf-du-Pape 
+                            to Côtes du Rhône, taste the terroir of Provence.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Private vineyard tours</li>
+                            <li>• Expert sommelier guides</li>
+                            <li>• Cellar door tastings</li>
+                            <li>• Wine purchase opportunities</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cycling Tours -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-bicycle text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-4 text-center">Cycling Adventures</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            Explore Provence at a leisurely pace on dedicated cycling routes through vineyards, 
+                            lavender fields, and charming villages.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• E-bike rentals available</li>
+                            <li>• Guided and self-guided tours</li>
+                            <li>• Picnic lunch included</li>
+                            <li>• All skill levels welcome</li>
+                        </ul>
+                    </div>
+
+                    <!-- Art & Craft Workshops -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-palette text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-4 text-center">Art Workshops</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            Follow in the footsteps of Van Gogh and Cézanne with painting classes in the landscapes 
+                            that inspired the masters. All levels welcome.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Outdoor painting sessions</li>
+                            <li>• Professional art instruction</li>
+                            <li>• Materials provided</li>
+                            <li>• Gallery visits included</li>
+                        </ul>
+                    </div>
+
+                    <!-- Market Tours -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-shopping-basket text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-4 text-center">Market Tours</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            Experience the vibrant atmosphere of Provençal markets with a local guide. 
+                            Discover regional specialties and meet passionate producers.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Weekly market visits</li>
+                            <li>• Local product tastings</li>
+                            <li>• Artisan meet & greets</li>
+                            <li>• Shopping assistance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Lavender Experiences -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-spa text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-4 text-center">Lavender Tours</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            Visit working lavender farms and distilleries during blooming season (June-August). 
+                            Learn about cultivation and create your own lavender products.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Farm & distillery visits</li>
+                            <li>• Essential oil workshops</li>
+                            <li>• Photography opportunities</li>
+                            <li>• Product creation classes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planning Your Visit -->
+    <section class="py-16 bg-gradient-to-r from-blue-500 to-blue-600">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-playfair text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Explore Provence?
+            </h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Let us help you plan the perfect Provençal adventure. From booking experiences to 
+                providing local insights, we're here to make your stay unforgettable.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="booking.html" class="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <i class="fas fa-calendar-check mr-2"></i>
+                    Book Your Stay
+                </a>
+                <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                    <i class="fas fa-map-marked-alt mr-2"></i>
+                    Plan Your Itinerary
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-leaf text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-playfair font-semibold">Mas Saint Antoine</span>
+            </div>
+            <p class="text-gray-400 mb-4">
+                17th-century Provençal farmhouse • Seven luxury gîtes • Authentic experiences
+            </p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-facebook text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-tripadvisor text-xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © 2024 Mas Saint Antoine. All rights reserved.
+            </p>
+        </footer>
+    </footer>
+
+    <script src="js/simple-navigation.js"></script>
+<script src="js/language-toggle.js"></script>
+<script src="js/analytics.js"></script>
+</body>
+</html>

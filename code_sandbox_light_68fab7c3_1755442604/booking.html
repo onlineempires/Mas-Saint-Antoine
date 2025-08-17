@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - Mas Saint Antoine | Online Booking</title>
+    <meta name="description" content="Book your perfect gîte at Mas Saint Antoine. Check availability, view rates, and secure your Provençal getaway with our easy online booking system.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-inter text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-sm"></i>
+                    </div>
+                    <a href="index.html" class="text-xl font-playfair font-semibold text-gray-800">Mas Saint Antoine</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+                    <a href="gites.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Gîtes</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</a>
+                    <a href="region.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Region</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</a>
+                    
+                    <!-- Language Toggle -->
+                    <div class="flex items-center space-x-2 text-sm">
+                        <button class="text-blue-600 font-medium" onclick="setLanguage('en')">EN</button>
+                        <span class="text-gray-400">|</span>
+                        <button class="text-gray-500 hover:text-blue-600" onclick="setLanguage('fr')">FR</button>
+                    </div>
+                    
+                    <span class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold">Book Now</span>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700 hover:text-blue-600" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="font-playfair text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                Book Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700">Perfect Stay</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Secure your dates at Mas Saint Antoine with our simple booking system. 
+                Choose your gîte, select your dates, and start planning your Provençal adventure.
+            </p>
+        </div>
+    </section>
+
+    <!-- Booking Interface -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-3 gap-8">
+                    
+                    <!-- Booking Form -->
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-2xl shadow-lg p-8">
+                            <h2 class="font-playfair text-2xl font-bold text-gray-800 mb-6">
+                                <i class="fas fa-calendar-alt text-blue-600 mr-3"></i>
+                                Select Your Dates
+                            </h2>
+                            
+                            <!-- Quick Selection Form -->
+                            <form id="booking-form" class="space-y-6">
+                                <!-- Gîte Selection -->
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">Choose Your Gîte</label>
+                                        <select id="gite-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                            <option value="">Select a gîte...</option>
+                                            <option value="the-mas">The Mas (8 guests, 4 bed)</option>
+                                            <option value="casa-dora">Casa Dora (6 guests, 3 bed)</option>
+                                            <option value="chez-pauline">Chez Pauline (4 guests, 2 bed)</option>
+                                            <option value="st-sebastien">St Sébastien (2 guests, 1 bed)</option>
+                                            <option value="le-cabanon">Le Cabanon (3 guests, 1 bed)</option>
+                                            <option value="le-kiwi">Le Kiwi (2 guests, studio)</option>
+                                            <option value="pool-studio">Pool Studio (2 guests, studio)</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">Number of Guests</label>
+                                        <select id="guests-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                            <option value="1">1 Guest</option>
+                                            <option value="2" selected>2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                            <option value="5">5 Guests</option>
+                                            <option value="6">6 Guests</option>
+                                            <option value="7">7 Guests</option>
+                                            <option value="8">8 Guests</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Date Selection -->
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">Check-in Date</label>
+                                        <input type="date" id="checkin-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">Check-out Date</label>
+                                        <input type="date" id="checkout-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    </div>
+                                </div>
+
+                                <!-- Quick Actions -->
+                                <div class="flex flex-wrap gap-4">
+                                    <button type="button" class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg hover:bg-blue-200 transition-colors" onclick="setQuickDates(7)">
+                                        1 Week
+                                    </button>
+                                    <button type="button" class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg hover:bg-blue-200 transition-colors" onclick="setQuickDates(14)">
+                                        2 Weeks
+                                    </button>
+                                    <button type="button" class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg hover:bg-blue-200 transition-colors" onclick="setQuickDates(21)">
+                                        3 Weeks
+                                    </button>
+                                </div>
+
+                                <!-- Search Button -->
+                                <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 px-6 rounded-lg text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                    <i class="fas fa-search mr-2"></i>
+                                    Check Availability & Rates
+                                </button>
+                            </form>
+
+                            <!-- Calendar Display (Simple grid for demonstration) -->
+                            <div class="mt-12">
+                                <h3 class="font-playfair text-xl font-bold text-gray-800 mb-6">
+                                    <i class="fas fa-calendar text-blue-600 mr-2"></i>
+                                    January 2024 Availability
+                                </h3>
+                                
+                                <div class="bg-gray-50 rounded-lg p-6">
+                                    <div class="grid grid-cols-7 gap-2 mb-4">
+                                        <div class="text-center text-sm font-semibold text-gray-600 py-2">Sun</div>
+                                        <div class="text-center text-sm font-semibold text-gray-600 py-2">Mon</div>
+                                        <div class="text-center text-sm font-semibold text-gray-600 py-2">Tue</div>
+                                        <div class="text-center text-sm font-semibold text-gray-600 py-2">Wed</div>
+                                        <div class="text-center text-sm font-semibold text-gray-600 py-2">Thu</div>
+                                        <div class="text-center text-sm font-semibold text-gray-600 py-2">Fri</div>
+                                        <div class="text-center text-sm font-semibold text-gray-600 py-2">Sat</div>
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-7 gap-2" id="calendar-grid">
+                                        <!-- Calendar will be populated by JavaScript -->
+                                    </div>
+                                    
+                                    <div class="flex justify-between items-center mt-6">
+                                        <button class="px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
+                                            <i class="fas fa-chevron-left mr-2"></i>Previous Month
+                                        </button>
+                                        <button class="px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
+                                            Next Month<i class="fas fa-chevron-right ml-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Summary & Information -->
+                    <div class="space-y-6">
+                        <!-- Selected Gîte Info -->
+                        <div class="bg-white rounded-2xl shadow-lg p-6" id="gite-info" style="display: none;">
+                            <h3 class="font-playfair text-xl font-bold text-gray-800 mb-4">Selected Gîte</h3>
+                            <div id="selected-gite-details">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Pricing Information -->
+                        <div class="bg-white rounded-2xl shadow-lg p-6">
+                            <h3 class="font-playfair text-xl font-bold text-gray-800 mb-4">
+                                <i class="fas fa-euro-sign text-blue-600 mr-2"></i>
+                                Pricing Information
+                            </h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-blue-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">High Season</h4>
+                                    <p class="text-sm text-gray-600">July - August</p>
+                                    <p class="text-blue-600 font-semibold">From €120/night</p>
+                                </div>
+                                
+                                <div class="border-l-4 border-blue-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">Mid Season</h4>
+                                    <p class="text-sm text-gray-600">May-June, September</p>
+                                    <p class="text-blue-600 font-semibold">From €95/night</p>
+                                </div>
+                                
+                                <div class="border-l-4 border-green-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">Low Season</h4>
+                                    <p class="text-sm text-gray-600">October - April</p>
+                                    <p class="text-green-600 font-semibold">From €75/night</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-6 border-t border-gray-200">
+                                <h4 class="font-semibold text-gray-800 mb-3">What's Included:</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Swimming pool access</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Free WiFi</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Private parking</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Garden access</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>BBQ facilities</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Linen & towels</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg p-6 text-white">
+                            <h3 class="font-playfair text-xl font-bold mb-4">
+                                <i class="fas fa-phone mr-2"></i>
+                                Need Help?
+                            </h3>
+                            <p class="text-white/90 mb-4">
+                                Our team is here to help you find the perfect accommodation and plan your stay.
+                            </p>
+                            <div class="space-y-2">
+                                <p><i class="fas fa-envelope mr-2"></i> info@massaintantoine.com</p>
+                                <p><i class="fas fa-phone mr-2"></i> +33 (0)4 XX XX XX XX</p>
+                                <p><i class="fas fa-whatsapp mr-2"></i> WhatsApp available</p>
+                            </div>
+                            <a href="contact.html" class="inline-block mt-4 bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                                Contact Us
+                            </a>
+                        </div>
+
+                        <!-- Special Offers -->
+                        <div class="bg-white rounded-2xl shadow-lg p-6">
+                            <h3 class="font-playfair text-xl font-bold text-gray-800 mb-4">
+                                <i class="fas fa-gift text-blue-600 mr-2"></i>
+                                Special Offers
+                            </h3>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                                    <h4 class="font-semibold text-green-800">Early Bird Special</h4>
+                                    <p class="text-sm text-green-700">10% off for bookings made 60 days in advance</p>
+                                </div>
+                                
+                                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                    <h4 class="font-semibold text-blue-800">Long Stay Discount</h4>
+                                    <p class="text-sm text-blue-700">15% off for stays of 14 nights or more</p>
+                                </div>
+                                
+                                <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                                    <h4 class="font-semibold text-purple-800">Return Guest Offer</h4>
+                                    <p class="text-sm text-purple-700">5% off for returning guests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Process Steps -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-playfair text-3xl font-bold text-gray-800 mb-12">Simple Booking Process</h2>
+                
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">1</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Choose Dates</h3>
+                        <p class="text-gray-600 text-sm">Select your preferred check-in and check-out dates</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">2</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Select Gîte</h3>
+                        <p class="text-gray-600 text-sm">Choose the perfect accommodation for your group</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">3</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Secure Payment</h3>
+                        <p class="text-gray-600 text-sm">Complete your booking with our secure payment system</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">4</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Enjoy Your Stay</h3>
+                        <p class="text-gray-600 text-sm">Relax and enjoy your Provençal experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-leaf text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-playfair font-semibold">Mas Saint Antoine</span>
+            </div>
+            <p class="text-gray-400 mb-4">
+                17th-century Provençal farmhouse • Six luxury gîtes • Authentic experiences
+            </p>
+            <p class="text-gray-500 text-sm">
+                © 2024 Mas Saint Antoine. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/simple-navigation.js"></script>
+    <script src="js/language-toggle.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>

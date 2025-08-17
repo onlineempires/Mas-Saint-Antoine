@@ -1,0 +1,338 @@
+/* Mas Saint Antoine - Custom Styles */
+
+/* French Luxury Typography */
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+    font-feature-settings: 'liga', 'dlig', 'kern';
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: 'kern', 'liga';
+}
+
+/* French luxury design elements */
+.french-luxury {
+    position: relative;
+}
+
+.french-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    transform: translateX(-50%);
+}
+
+.luxury-border {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.1);
+}
+
+.luxury-card {
+    background: linear-gradient(145deg, #FEFEFE 0%, #F8F6F0 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation enhancements */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background: linear-gradient(90deg, #f59e0b, #ea580c);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero section enhancements */
+.hero-bg {
+    background: linear-gradient(135deg, 
+        rgba(255, 251, 235, 0.9) 0%, 
+        rgba(254, 243, 199, 0.9) 25%,
+        rgba(253, 230, 138, 0.8) 50%,
+        rgba(251, 191, 36, 0.7) 75%,
+        rgba(245, 158, 11, 0.8) 100%
+    );
+}
+
+/* French Luxury Color Palette */
+:root {
+    --mas-cream: #F7F3E9;
+    --mas-beige: #F5F1E8;
+    --mas-stone: #E8E4DB;
+    --mas-blue: #6B9BD6;
+    --mas-blue-dark: #4A90C2;
+    --mas-terracotta: #CD853F;
+    --mas-green: #7C9885;
+    --mas-purple: #8B7BA8;
+    
+    /* French luxury accents */
+    --luxury-gold: #D4AF37;
+    --luxury-gold-dark: #B8941F;
+    --luxury-navy: #2C3E50;
+    --luxury-charcoal: #34495E;
+    --french-white: #FEFEFE;
+    --french-ivory: #F8F6F0;
+    --provence-lavender: #967BB6;
+    --provence-olive: #8FBC8F;
+}
+
+/* French Luxury Utilities */
+.text-luxury-gold { color: var(--luxury-gold); }
+.text-luxury-gold-dark { color: var(--luxury-gold-dark); }
+.text-luxury-navy { color: var(--luxury-navy); }
+.text-luxury-charcoal { color: var(--luxury-charcoal); }
+.text-french-white { color: var(--french-white); }
+.text-french-ivory { color: var(--french-ivory); }
+.text-provence-lavender { color: var(--provence-lavender); }
+.text-provence-olive { color: var(--provence-olive); }
+
+.bg-luxury-gold { background-color: var(--luxury-gold); }
+.bg-luxury-gold-dark { background-color: var(--luxury-gold-dark); }
+.bg-luxury-navy { background-color: var(--luxury-navy); }
+.bg-luxury-charcoal { background-color: var(--luxury-charcoal); }
+.bg-french-white { background-color: var(--french-white); }
+.bg-french-ivory { background-color: var(--french-ivory); }
+.bg-provence-lavender { background-color: var(--provence-lavender); }
+.bg-provence-olive { background-color: var(--provence-olive); }
+
+.border-luxury-gold { border-color: var(--luxury-gold); }
+.hover\:bg-luxury-gold-dark:hover { background-color: var(--luxury-gold-dark); }
+.hover\:text-luxury-gold:hover { color: var(--luxury-gold); }
+
+/* Custom gradients */
+.gradient-mas-blue {
+    background: linear-gradient(135deg, var(--mas-blue) 0%, var(--mas-blue-dark) 100%);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--mas-blue) 0%, var(--mas-blue-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* French Luxury Button Styling */
+.luxury-cta {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid var(--luxury-gold);
+    letter-spacing: 0.1em;
+}
+
+.luxury-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.luxury-cta:hover::before {
+    left: 100%;
+}
+
+.luxury-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+}
+
+/* Traditional button styles */
+.btn-primary {
+    background: linear-gradient(135deg, var(--mas-blue) 0%, var(--mas-blue-dark) 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(107, 155, 214, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(107, 155, 214, 0.4);
+}
+
+.btn-secondary {
+    border: 2px solid var(--mas-blue);
+    color: var(--mas-blue);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--mas-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Image placeholders with elegant styling */
+.image-placeholder {
+    background: linear-gradient(135deg, 
+        rgba(251, 191, 36, 0.1) 0%, 
+        rgba(245, 158, 11, 0.2) 50%,
+        rgba(234, 88, 12, 0.1) 100%
+    );
+    border: 2px dashed rgba(245, 158, 11, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(75, 85, 99, 0.6);
+    transition: all 0.3s ease;
+}
+
+.image-placeholder:hover {
+    border-color: rgba(245, 158, 11, 0.5);
+    background: linear-gradient(135deg, 
+        rgba(251, 191, 36, 0.15) 0%, 
+        rgba(245, 158, 11, 0.25) 50%,
+        rgba(234, 88, 12, 0.15) 100%
+    );
+}
+
+/* Responsive design enhancements */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Loading animations */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f59e0b, #ea580c);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ea580c, #dc2626);
+}
+
+/* Accessibility improvements */
+.focus-visible {
+    outline: 2px solid #f59e0b;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .gradient-text {
+        -webkit-text-fill-color: #b45309;
+        background: none;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}

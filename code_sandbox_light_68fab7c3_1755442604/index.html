@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas Saint Antoine - Luxury Provençal Gîtes & Holiday Rentals</title>
+    <meta name="description" content="Discover Mas Saint Antoine, a stunning 17th-century Provençal farmhouse offering six luxury self-catering gîtes with pool, gardens, and authentic charm near Avignon.">
+    <meta name="keywords" content="Provence accommodation, luxury gites, Avignon holiday rental, French farmhouse, pool villa, family holiday France">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://massaintantoine.com/">
+    <meta property="og:title" content="Mas Saint Antoine - Luxury Provençal Gîtes">
+    <meta property="og:description" content="Authentic 17th-century Provençal farmhouse with six luxury gîtes, pool, and gardens near Avignon">
+    <meta property="og:image" content="https://massaintantoine.com/images/hero-mas-saint-antoine.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://massaintantoine.com/">
+    <meta property="twitter:title" content="Mas Saint Antoine - Luxury Provençal Gîtes">
+    <meta property="twitter:description" content="Authentic 17th-century Provençal farmhouse with six luxury gîtes, pool, and gardens near Avignon">
+    <meta property="twitter:image" content="https://massaintantoine.com/images/hero-mas-saint-antoine.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind config to ensure proper loading
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stone': {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Mas Saint Antoine",
+        "description": "17th-century Provençal farmhouse offering six luxury self-catering gîtes with pool and gardens",
+        "url": "https://massaintantoine.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "FR",
+            "addressRegion": "Provence-Alpes-Côte d'Azur"
+        },
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Swimming Pool"},
+            {"@type": "LocationFeatureSpecification", "name": "Air Conditioning"},
+            {"@type": "LocationFeatureSpecification", "name": "Free WiFi"},
+            {"@type": "LocationFeatureSpecification", "name": "Private Parking"},
+            {"@type": "LocationFeatureSpecification", "name": "Garden"},
+            {"@type": "LocationFeatureSpecification", "name": "BBQ Facilities"}
+        ]
+    }
+    </script>
+</head>
+<body class="font-inter text-gray-800 bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-playfair font-semibold text-gray-800">Mas Saint Antoine</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+                    <a href="gites.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Gîtes</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</a>
+                    <a href="region.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Region</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</a>
+                    
+                    <!-- Language Toggle -->
+                    <div class="flex items-center space-x-2 text-sm">
+                        <button class="text-blue-600 font-medium" onclick="setLanguage('en')">EN</button>
+                        <span class="text-gray-400">|</span>
+                        <button class="text-gray-500 hover:text-blue-600" onclick="setLanguage('fr')">FR</button>
+                    </div>
+                    
+                    <a href="booking.html" class="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 hover:shadow-lg transition-all duration-300">
+                        Book Now
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700 hover:text-blue-600" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden mt-4 pb-4" id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+                    <a href="gites.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Gîtes</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</a>
+                    <a href="region.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Region</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</a>
+                    <a href="booking.html" class="bg-blue-600 text-white px-6 py-2 text-center font-medium rounded">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Hero Background with Real Image -->
+        <div class="absolute inset-0">
+            <img src="https://massaintantoine.com//wp-content/uploads/2015/11/The-Mas-Home.jpg" 
+                 alt="Mas Saint Antoine - 17th Century Provençal Farmhouse" 
+                 class="w-full h-full object-cover">
+            <!-- Dark overlay for text readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+            <!-- Subtle color overlay for warmth -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-amber-900/10"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="font-playfair text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Authentic Provençal
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-100">
+                    Luxury
+                </span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed">
+                Discover the magic of our 17th-century farmhouse nestled among orchards and gardens, 
+                offering six exquisite gîtes with modern comforts and timeless charm.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="gites.html" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:bg-blue-700 transition-all duration-300">
+                    Explore Our Gîtes
+                </a>
+                <a href="booking.html" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-800 transition-all duration-300">
+                    Check Availability
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-gray-600 text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Property Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                        A Timeless Provençal Experience
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+                        Step into history at Mas Saint Antoine, where centuries of Provençal tradition meet modern luxury. 
+                        Our beautifully restored farmhouse offers the perfect blend of authentic charm and contemporary comfort.
+                    </p>
+                </div>
+                
+                <!-- Luxury Accommodation Showcase -->
+                <div class="relative">
+                    <!-- Main Hero Image -->
+                    <div class="relative h-[600px] md:h-[700px] overflow-hidden rounded-3xl shadow-2xl mb-16">
+                        <img src="https://massaintantoine.com/wp-content/uploads/2020/03/2.Shared-Pool.jpg" 
+                             alt="Mas Saint Antoine - Luxury Provençal Accommodation with Pool and Gardens" 
+                             class="w-full h-full object-cover">
+                        
+                        <!-- Elegant Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        
+                        <!-- Content Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                            <div class="max-w-2xl">
+                                <h3 class="font-playfair text-3xl md:text-4xl font-bold text-white mb-4">
+                                    Six Unique Gîtes, One Unforgettable Stay
+                                </h3>
+                                <p class="text-xl text-gray-200 mb-6 leading-relaxed">
+                                    Each of our carefully curated accommodations tells its own story while maintaining 
+                                    the authentic Provençal character that makes Mas Saint Antoine truly special.
+                                </p>
+                                <div class="flex flex-wrap gap-4">
+                                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
+                                        <span class="text-white font-medium">2-24 Guests</span>
+                                    </div>
+                                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
+                                        <span class="text-white font-medium">Air Conditioned</span>
+                                    </div>
+                                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
+                                        <span class="text-white font-medium">Orchard Setting</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Stats Cards -->
+                        <div class="absolute top-8 right-8 space-y-4">
+                            <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-white/50">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-blue-600 mb-1">6</div>
+                                    <div class="text-sm text-gray-700 font-medium">Unique Gîtes</div>
+                                </div>
+                            </div>
+                            <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-white/50">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-blue-600 mb-1">17th</div>
+                                    <div class="text-sm text-gray-700 font-medium">Century</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Amenities Grid -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="group h-full">
+                            <div class="bg-white rounded-2xl p-6 border border-stone-200 hover:border-stone-300 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                                <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors">
+                                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-semibold text-stone-800 mb-2">Orchard Gardens</h4>
+                                <p class="text-stone-600 text-sm leading-relaxed flex-grow">
+                                    Peaceful gardens with mature fruit trees, lavender, and traditional Provençal landscaping.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="group h-full">
+                            <div class="bg-white rounded-2xl p-6 border border-stone-200 hover:border-stone-300 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                                <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-sky-100 transition-colors">
+                                    <svg class="w-6 h-6 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 2v20M14 2v20M4 7l3-3 3 3M20 17l-3 3-3-3" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-semibold text-stone-800 mb-2">Climate Comfort</h4>
+                                <p class="text-stone-600 text-sm leading-relaxed flex-grow">
+                                    Brand new air conditioning installed in 2024 ensures perfect comfort during warm summers.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="group h-full">
+                            <div class="bg-white rounded-2xl p-6 border border-stone-200 hover:border-stone-300 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                                <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-purple-100 transition-colors">
+                                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-semibold text-stone-800 mb-2">Group Friendly</h4>
+                                <p class="text-stone-600 text-sm leading-relaxed flex-grow">
+                                    From intimate couples' retreats to large family gatherings, accommodate up to 24 guests.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="group h-full">
+                            <div class="bg-white rounded-2xl p-6 border border-stone-200 hover:border-stone-300 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                                <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-indigo-100 transition-colors">
+                                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-semibold text-stone-800 mb-2">Modern Connectivity</h4>
+                                <p class="text-stone-600 text-sm leading-relaxed flex-grow">
+                                    High-speed fiber WiFi throughout the property ensures you stay connected.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center mt-12">
+                        <div class="inline-flex flex-col sm:flex-row items-center gap-4">
+                            <a href="gites.html" 
+                               class="bg-stone-800 text-white px-8 py-3 rounded-full font-medium hover:bg-stone-900 hover:shadow-lg transition-all duration-300">
+                                Discover Our Gîtes
+                            </a>
+                            <a href="booking.html" 
+                               class="border-2 border-stone-300 text-stone-700 px-8 py-3 rounded-full font-medium hover:border-stone-800 hover:text-stone-800 transition-all duration-300">
+                                Check Availability
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outdoor Spaces & Pool -->
+    <section class="py-20 bg-stone-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-7xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold text-stone-800 mb-6">
+                        Pool, Gardens & Outdoor Living
+                    </h2>
+                    <p class="text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed">
+                        Step outside to discover beautifully landscaped gardens, a sparkling swimming pool, 
+                        and outdoor spaces designed for relaxation and memorable gatherings.
+                    </p>
+                </div>
+
+                <!-- Main Pool Showcase -->
+                <div class="grid lg:grid-cols-5 gap-8 mb-16">
+                    <!-- Pool Image - Takes 3 columns -->
+                    <div class="lg:col-span-3">
+                        <div class="relative group">
+                            <div class="aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
+                                <img src="https://massaintantoine.com/wp-content/uploads/2020/03/2.Shared-Pool.jpg" 
+                                     alt="Mas Saint Antoine Swimming Pool surrounded by Mediterranean gardens" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <!-- Subtle info overlay -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                                <div class="flex items-center justify-between text-sm">
+                                    <div class="flex items-center space-x-4">
+                                        <span class="text-stone-700"><strong>12m × 6m</strong> Swimming Pool</span>
+                                        <span class="text-stone-600">Heated to 28°C</span>
+                                    </div>
+                                    <div class="text-stone-500">8am - 10pm</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pool Details - Takes 2 columns -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div>
+                            <h3 class="font-playfair text-2xl font-semibold text-stone-800 mb-4">
+                                Your Swimming Pool
+                            </h3>
+                            <p class="text-stone-600 leading-relaxed mb-6">
+                                Our pristine 12×6 meter swimming pool is the heart of outdoor life at Mas Saint Antoine. 
+                                Heated and beautifully maintained, it's surrounded by mature olive trees and lavender, 
+                                creating the perfect Provençal atmosphere for morning swims or evening relaxation.
+                            </p>
+                        </div>
+
+                        <!-- Pool Features -->
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-stone-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <span class="text-stone-700">Heated to comfortable 28°C</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-stone-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <span class="text-stone-700">Daily maintenance & cleaning</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-stone-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
+                                </div>
+                                <span class="text-stone-700">Safety fenced & secure</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-stone-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <span class="text-stone-700">Surrounded by gardens</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outdoor Amenities -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Air Conditioning -->
+                    <div class="group">
+                        <div class="bg-white rounded-2xl p-6 border border-stone-200 hover:shadow-lg transition-all duration-300">
+                            <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-sky-100 transition-colors">
+                                <svg class="w-6 h-6 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 2v20M14 2v20M4 7l3-3 3 3M20 17l-3 3-3-3" />
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-stone-800 mb-2">Climate Comfort</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">New air conditioning in all gîtes for perfect comfort</p>
+                        </div>
+                    </div>
+
+                    <!-- Garden Lounging -->
+                    <div class="group">
+                        <div class="bg-white rounded-2xl p-6 border border-stone-200 hover:shadow-lg transition-all duration-300">
+                            <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors">
+                                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-stone-800 mb-2">Pool Loungers</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">Comfortable sun beds and shaded seating areas</p>
+                        </div>
+                    </div>
+
+                    <!-- BBQ & Dining -->
+                    <div class="group">
+                        <div class="bg-white rounded-2xl p-6 border border-stone-200 hover:shadow-lg transition-all duration-300">
+                            <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-100 transition-colors">
+                                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-stone-800 mb-2">BBQ & Dining</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">Outdoor cooking facilities and al fresco dining spaces</p>
+                        </div>
+                    </div>
+
+                    <!-- Gardens -->
+                    <div class="group">
+                        <div class="bg-white rounded-2xl p-6 border border-stone-200 hover:shadow-lg transition-all duration-300">
+                            <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-stone-800 mb-2">Mature Gardens</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">Orchard setting with olive trees, lavender & herbs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pool Etiquette Note -->
+                <div class="mt-12 bg-stone-100 rounded-2xl p-6">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-stone-200 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-3 h-3 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-stone-800 mb-1">Pool Guidelines</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                Pool hours are 8am-10pm daily. Children must be supervised at all times. 
+                                Please help us maintain this beautiful space for everyone to enjoy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gradient-to-br from-stone-50 to-stone-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-stone-800 mb-16">
+                    Why Choose Mas Saint Antoine?
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="group">
+                        <div class="bg-white rounded-3xl p-8 border border-stone-200 hover:border-stone-300 hover:shadow-lg transition-all duration-300">
+                            <div class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-100 transition-colors">
+                                <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                            </div>
+                            <h3 class="font-playfair text-2xl font-semibold text-stone-800 mb-4">Authentic Character</h3>
+                            <p class="text-stone-600 leading-relaxed">
+                                A genuine 17th-century Provençal farmhouse lovingly restored to preserve its historic 
+                                charm while offering all modern conveniences.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-white rounded-3xl p-8 border border-stone-200 hover:border-stone-300 hover:shadow-lg transition-all duration-300">
+                            <div class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-100 transition-colors">
+                                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-playfair text-2xl font-semibold text-stone-800 mb-4">Prime Location</h3>
+                            <p class="text-stone-600 leading-relaxed">
+                                Perfectly positioned near Avignon with easy access to Provence's most treasured 
+                                attractions, vineyards, and cultural experiences.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-white rounded-3xl p-8 border border-stone-200 hover:border-stone-300 hover:shadow-lg transition-all duration-300">
+                            <div class="w-16 h-16 bg-violet-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-violet-100 transition-colors">
+                                <svg class="w-8 h-8 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-playfair text-2xl font-semibold text-stone-800 mb-4">Exceptional Service</h3>
+                            <p class="text-stone-600 leading-relaxed">
+                                From shuttle services to kitchen starter packs, we provide thoughtful touches 
+                                that make your stay effortless and memorable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews & Testimonials -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                        What Our Guests Say
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        Don't just take our word for it. Here's what makes Mas Saint Antoine special according to 
+                        the guests who have experienced our Provençal hospitality.
+                    </p>
+                </div>
+
+                <!-- Review Stats -->
+                <div class="grid md:grid-cols-4 gap-8 mb-16">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-amber-600 mb-2">4.9</div>
+                        <div class="text-gray-600 mb-2">Overall Rating</div>
+                        <div class="flex justify-center text-amber-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
+                        <div class="text-gray-600">Would Recommend</div>
+                        <div class="text-sm text-gray-500 mt-2">Based on 150+ reviews</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-600 mb-2">4.8</div>
+                        <div class="text-gray-600">Cleanliness</div>
+                        <div class="flex justify-center text-green-400 mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-600 mb-2">5.0</div>
+                        <div class="text-gray-600">Host Rating</div>
+                        <div class="flex justify-center text-purple-400 mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Reviews -->
+                <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Review 1 -->
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold">
+                                S
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-800">Sarah & James</h4>
+                                <div class="flex text-amber-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="text-sm text-gray-500">United Kingdom • Casa Dora</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            "Absolutely magical! The combination of authentic Provençal charm and modern comfort exceeded our expectations. 
+                            The pool area is stunning, and the hosts were incredibly welcoming. We're already planning our return visit!"
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-calendar mr-2"></i>June 2024
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold">
+                                M
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-800">Marie & Pierre</h4>
+                                <div class="flex text-amber-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="text-sm text-gray-500">France • The Mas</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            "Un séjour parfait dans un cadre authentique! L'accueil chaleureux, les équipements modernes, 
+                            et la proximité d'Avignon font de ce lieu un choix exceptionnel. Le petit-déjeuner de bienvenue était délicieux."
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-calendar mr-2"></i>August 2024
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold">
+                                T
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-800">The Wilson Family</h4>
+                                <div class="flex text-amber-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="text-sm text-gray-500">Australia • Chez Pauline</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            "Perfect for our family of four! The kids loved the pool, we loved the peaceful setting, 
+                            and everyone enjoyed exploring the beautiful gardens. The local recommendations were spot-on. 
+                            Couldn't have asked for better hosts!"
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-calendar mr-2"></i>July 2024
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Reviews Grid -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                A
+                            </div>
+                            <div class="ml-3">
+                                <h5 class="font-semibold text-gray-800">Anna & Klaus</h5>
+                                <div class="flex text-amber-400 text-xs">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            "The air conditioning was a lifesaver during our July visit! Spotlessly clean, beautifully decorated, 
+                            and the shuttle service made exploring so easy."
+                        </p>
+                        <p class="text-xs text-gray-500 mt-2">Germany • Pool Studio • May 2024</p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                C
+                            </div>
+                            <div class="ml-3">
+                                <h5 class="font-semibold text-gray-800">Carlos & Isabella</h5>
+                                <div class="flex text-amber-400 text-xs">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            "Romantic, peaceful, and perfectly located for exploring Provence. The kitchen starter pack 
+                            was such a thoughtful touch. We felt truly welcomed!"
+                        </p>
+                        <p class="text-xs text-gray-500 mt-2">Spain • Le Kiwi • September 2024</p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                R
+                            </div>
+                            <div class="ml-3">
+                                <h5 class="font-semibold text-gray-800">Robert & Linda</h5>
+                                <div class="flex text-amber-400 text-xs">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            "Our third visit and it never disappoints! The property is immaculately maintained, 
+                            and the hosts' attention to detail is exceptional. Mas Saint Antoine feels like home."
+                        </p>
+                        <p class="text-xs text-gray-500 mt-2">USA • Le Cabanon • October 2024</p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                Y
+                            </div>
+                            <div class="ml-3">
+                                <h5 class="font-semibold text-gray-800">Yuki & Hiroshi</h5>
+                                <div class="flex text-amber-400 text-xs">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            "A perfect blend of traditional charm and modern amenities. The gardens are beautiful, 
+                            and we loved the evening ambiance around the pool. Highly recommended!"
+                        </p>
+                        <p class="text-xs text-gray-500 mt-2">Japan • St Sébastien • June 2024</p>
+                    </div>
+                </div>
+
+                <!-- Review Platforms -->
+                <div class="text-center">
+                    <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-8">Find Us On</h3>
+                    <div class="flex justify-center items-center space-x-8 flex-wrap gap-4">
+                        <div class="flex items-center bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow">
+                            <i class="fab fa-airbnb text-3xl text-red-500 mr-3"></i>
+                            <div class="text-left">
+                                <div class="font-semibold text-gray-800">Airbnb</div>
+                                <div class="text-sm text-gray-600">4.9★ (85 reviews)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow">
+                            <i class="fas fa-home text-3xl text-blue-600 mr-3"></i>
+                            <div class="text-left">
+                                <div class="font-semibold text-gray-800">Booking.com</div>
+                                <div class="text-sm text-gray-600">9.2/10 (72 reviews)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow">
+                            <i class="fab fa-tripadvisor text-3xl text-green-600 mr-3"></i>
+                            <div class="text-left">
+                                <div class="font-semibold text-gray-800">TripAdvisor</div>
+                                <div class="text-sm text-gray-600">5/5 (48 reviews)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="py-16 bg-gradient-to-r from-blue-500 to-blue-600">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-playfair text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Experience Provence?
+            </h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Book your stay at Mas Saint Antoine today and discover why our guests return year after year.
+            </p>
+            <a href="booking.html" class="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-block">
+                Check Availability & Book Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-leaf text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-playfair font-semibold">Mas Saint Antoine</span>
+            </div>
+            <p class="text-gray-400 mb-4">
+                17th-century Provençal farmhouse • Six luxury gîtes • Authentic experiences
+            </p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-facebook text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-tripadvisor text-xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © 2024 Mas Saint Antoine. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/simple-navigation.js"></script>
+    <script src="js/language-toggle.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>

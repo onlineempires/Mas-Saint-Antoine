@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Mas Saint Antoine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+    <div class="text-center max-w-md mx-auto p-8">
+        <div class="mb-8">
+            <h1 class="text-6xl font-bold text-blue-600 mb-4">404</h1>
+            <h2 class="text-2xl font-playfair font-semibold text-gray-800 mb-4">Page Not Found</h2>
+            <p class="text-gray-600 mb-8">The page you're looking for doesn't exist or has been moved.</p>
+        </div>
+        
+        <div class="space-y-4">
+            <a href="index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">
+                🏠 Return Home
+            </a>
+            
+            <div class="grid grid-cols-2 gap-3 mt-6">
+                <a href="gites.html" class="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors text-sm">
+                    🏨 Gîtes
+                </a>
+                <a href="services.html" class="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors text-sm">
+                    🛎️ Services
+                </a>
+                <a href="region.html" class="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors text-sm">
+                    🗺️ Region
+                </a>
+                <a href="contact.html" class="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors text-sm">
+                    📞 Contact
+                </a>
+            </div>
+        </div>
+        
+        <div class="mt-8 pt-6 border-t border-gray-200">
+            <p class="text-xs text-gray-500">
+                <strong>Mas Saint Antoine</strong><br>
+                Luxury Provençal Gîtes & Holiday Rentals
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Log 404 for debugging
+        console.log('404 Error - Requested URL:', window.location.href);
+        console.log('Current pathname:', window.location.pathname);
+        
+        // Optional: Auto-redirect common misspellings or old URLs
+        const redirects = {
+            '/home': '/index.html',
+            '/accommodations': '/gites.html',
+            '/amenities': '/services.html'
+        };
+        
+        if (redirects[window.location.pathname]) {
+            setTimeout(() => {
+                window.location.href = redirects[window.location.pathname];
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

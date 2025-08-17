@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas Saint Antoine - Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .nav-test {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-test a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 10px 15px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .nav-test a:hover {
+            background: #1d4ed8;
+        }
+        .status {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #10b981;
+        }
+    </style>
+</head>
+<body>
+    <h1>🏡 Mas Saint Antoine - Navigation Test</h1>
+    
+    <div class="nav-test">
+        <h2>📋 Navigation Links Test</h2>
+        <p>Click each link to test if pages load correctly:</p>
+        
+        <a href="index.html">🏠 Home</a>
+        <a href="gites.html">🏨 Gîtes</a>
+        <a href="services.html">🛎️ Services</a>
+        <a href="region.html">🗺️ Region</a>
+        <a href="contact.html">📞 Contact</a>
+        <a href="booking.html">📅 Booking</a>
+    </div>
+    
+    <div class="status">
+        <h2>✅ Files Status</h2>
+        <p><strong>✅ All Files Present:</strong></p>
+        <ul>
+            <li>✅ index.html (Homepage)</li>
+            <li>✅ gites.html (Accommodations)</li>
+            <li>✅ services.html (Services)</li>
+            <li>✅ region.html (Region Guide)</li>
+            <li>✅ contact.html (Contact)</li>
+            <li>✅ booking.html (Booking)</li>
+            <li>✅ css/style.css (Styles)</li>
+            <li>✅ js/main.js (JavaScript)</li>
+        </ul>
+        
+        <h3>🔧 Troubleshooting</h3>
+        <p>If links show "Not Found":</p>
+        <ol>
+            <li><strong>Check URL structure:</strong> Remove any extra paths</li>
+            <li><strong>Try direct links:</strong> yoursite.com/gites.html</li>
+            <li><strong>Refresh deployment:</strong> Re-publish the site</li>
+            <li><strong>Check case sensitivity:</strong> Use exact filenames</li>
+        </ol>
+        
+        <p><strong>🌐 Current URL:</strong> <span id="current-url"></span></p>
+    </div>
+    
+    <script>
+        document.getElementById('current-url').textContent = window.location.href;
+        console.log('Test page loaded successfully');
+        console.log('Current URL:', window.location.href);
+        console.log('Files should be at:', window.location.origin);
+    </script>
+</body>
+</html>
